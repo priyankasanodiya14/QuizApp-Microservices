@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.masai.LinkedList&apos; to &apos;Node&apos;&#x0D;&#x0A;- Original project: &apos;Linkedlist&apos;&#x0D;&#x0A;- Original element: &apos;com.masai.LinkedList&apos;&#x0D;&#x0A;- Renamed element: &apos;com.masai.Node&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Rename similarly named elements&#x0D;&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LinkedList&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.masai{LinkedList.java[LinkedList" matchStrategy="1" name="Node" patterns="*" qualified="true" references="true" similarDeclarations="true" stamp="1698664397426" textual="true" version="1.0"/>
+</session>

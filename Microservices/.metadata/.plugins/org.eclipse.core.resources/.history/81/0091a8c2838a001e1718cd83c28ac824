@@ -1,0 +1,46 @@
+package com.masai.quiz.Controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.masai.quiz.Model.QuestionWrapper;
+import com.masai.quiz.Model.QuizDto;
+import com.masai.quiz.Model.Response;
+import com.masai.quiz.Service.QuizService;
+
+
+@RestController
+@RequestMapping("quiz")
+public class QuizController {
+    @Autowired
+    QuizService quizService;
+    @PostMapping("create")
+    public ResponseEntity<String> createQuiz (@RequestBody QuizDto quizDto){ //data transfer obj
+        return quizService.createQuiz(quizDto.getCategory(), quizDto.getNumOfQuestions(), quizDto.getTitle());
+    }
+    
+    @GetMapping("createByLevel")
+    public ResponseEntity<String> createByLevel(@RequestParam String Level, @RequestParam String title, @RequestParam Integer numOfQuestions){
+        return quizService.createByLevel(Level, title, numOfQuestions);
+    }
+    @GetMapping("get/{id}")
+    public ResponseEntity<List<QuestionWrapper>> getQuestions(@PathVariable int id){
+        return quizService.getQuizQuestions(id);
+    }
+    @GetMapping("getByName/{name}")
+    public ResponseEntity<List<QuestionWrapper>> getQuestionsByTitle(@PathVariable String name){
+
+        return quizService.getQuizQuestionsByTitle(name);
+    }
+    @PostMapping("submit/{id}")
+    public ResponseEntity<Integer> submit(@PathVariable Integer id, @RequestBody List<Response> responses){
+           return quizService.getScore(id, responses);
+    }
+}

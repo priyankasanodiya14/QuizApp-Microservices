@@ -1,0 +1,15 @@
+package com.masai.quiz.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
+
+import com.masai.quiz.Dao.QuizDao;
+import com.masai.quiz.Feign.QuizInterface;
+import com.masai.quiz.Model.QuestionWrapper;
+import com.masai.quiz.Model.Quiz;
+import com.masai.quiz.Model.Response;
+
