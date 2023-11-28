@@ -2,6 +2,16 @@
 
 <p id="description">QuizApp is a dynamic and feature-rich quiz application built in SpringBoot microservices where users can play quiz and get scores accordingly.</p>
 
+
+### Services
+- **Quiz-Service**
+- **Question-Service**
+
+### PROJECT FLOW
+![img](images/ssss.png)
+
+![img2](images/Screenshot (816).png)
+
 <h2>🧐 Features</h2>
 
 Here're some of the project's best features:
@@ -22,7 +32,3 @@ Technologies used in the project:
 - PostgreSql
 - Maven
 - Netflix-Eureka
-
-<img src="https://drive.google.com/file/d/1DtjRZv6Sr9sY1567bXYiNXsJ9Z3hjozW/view?usp=sharing" >
-
-<img src="https://drive.google.com/file/d/1rQar80qWXZPJ0HbuYFlufIMW4lN-GoWL/view?usp=sharing">
